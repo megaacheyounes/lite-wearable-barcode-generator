@@ -1,5 +1,3 @@
-<div class="container">
-    <text class="title">
-        {{ $t('strings.hello') }} {{ title }}
-    </text>
-</div>
+<stack style="width: 100%; height: 100%">
+    <canvas ref="canvasRef" style="width: 50%; height: 20%; left: 25%; top: 40%; background-color: #ffffff;"></canvas>
+</stack>
