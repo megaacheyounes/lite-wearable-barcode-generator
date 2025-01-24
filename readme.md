@@ -34,6 +34,8 @@ export default {
   },
 };
 ```
+
+<img src="./.screenshots/example_usage.png" alt="Barcode 128 Example" height="300">
  
 ### Customization Examples
 
@@ -60,7 +62,9 @@ renderBarcode128(canvas, "123456789", {
   barWidth: 3.5,
 });
 ```
- 
+
+<img src="./.screenshots/example_size_position.png" alt="Barcode 128 Example" height="300">
+
 #### Example 2: Colors
 
 **html (xxx.hml)**
@@ -83,7 +87,9 @@ renderBarcode128(canvas, "123456789", {
   barColor: "#FF00FF",
 });
 ```
- 
+
+<img src="./.screenshots/example_colors.png" alt="Barcode 128 Example" height="300">
+
 ## Error Handling
 
 The library provides these error codes:
@@ -146,4 +152,5 @@ export default {
   }
 };
 ```
- 
+
+<img src="./.screenshots/example_error.png" alt="Barcode 128 Example" height="300">
