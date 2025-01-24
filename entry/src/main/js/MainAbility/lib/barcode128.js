@@ -2,8 +2,7 @@
  * Code 128C Barcode generation library for Huawei LiteWearable watches
  * {@link https://github.com/megaacheyounes/lite-wearable-barcode-generator Github}
  *
- * @param value
- * @returns
+ * Version 0.1.0 (jan 2025)
  */
 
 

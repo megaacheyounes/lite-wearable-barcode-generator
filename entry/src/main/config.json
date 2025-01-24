@@ -1,10 +1,10 @@
 {
   "app": {
     "bundleName": "com.younes.litewearable.barcodegenerator",
-    "vendor": "example",
+    "vendor": "YounesMegaache",
     "version": {
-      "code": 1000000,
-      "name": "1.0.0"
+      "code": 1000,
+      "name": "0.1.0"
     }
   },
   "deviceConfig": {},
