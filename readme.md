@@ -36,7 +36,19 @@ export default {
 ```
 
 <img src="./.screenshots/example_usage.png" alt="Barcode 128 Example" height="300">
- 
+
+## Configuration Options
+
+| Configuration Key | Type     | Default Value             | Description                                 |
+| ----------------- | -------- | ------------------------- | ------------------------------------------- |
+| `startingPointX`  | number   | 10                        | X-coordinate where barcode rendering starts |
+| `startingPointY`  | number   | 5                         | Y-coordinate where barcode rendering starts |
+| `barHeight`       | number   | 80                        | Height of each bar in pixels                |
+| `barWidth`        | number   | 2                         | Width of each bar in pixels                 |
+| `barColor`        | string   | '#111111'                 | Color of the bars (dark bars)               |
+| `bgColor`         | string   | '#ffffff'                 | Background color (light bars)               |
+| `onRenderFailed`  | function | code=>console.error(code) | Callback function for rendering errors      |
+
 ### Customization Examples
 
 ##### Example 1: Size and position
@@ -154,3 +166,4 @@ export default {
 ```
 
 <img src="./.screenshots/example_error.png" alt="Barcode 128 Example" height="300">
+
