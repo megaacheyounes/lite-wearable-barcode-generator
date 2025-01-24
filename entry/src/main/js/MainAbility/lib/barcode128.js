@@ -1,3 +1,4 @@
+
 function generateCode128CBarcode(value) {
     // Code 128 number binary map
     const code128C = [
@@ -55,11 +56,43 @@ const DEFAULT_CONFIG = {
     barHeight: 80,
     barWidth: 2,
     barColor: '#111111',
-    bgColor: '#ffffff'
+    bgColor: '#ffffff',
+    onRenderFailed: (code) => console.error(code)
 }
 
 
+const BarcodeErrorCodes = {
+    CANVAS_UNDEFINED: 0,
+    VALUE_INVALID: 1,
+    VALUE_LENGTH_INVALID: 2,
+    INTERNAL_ERROR: 3
+}
+
+/**
+ * @param canvas canvas component
+ * @param value Numeric value only (numbers only)
+ */
 function renderBarcode128(canvas, value, config) {
+    if (!value || isNaN(Number(value))) {
+        if (config.onRenderFailed != null) {
+            config.onRenderFailed(BarcodeErrorCodes.VALUE_INVALID)
+        }
+        return
+    }
+
+    if (value.length > 254) {
+        if (config.onRenderFailed != null) {
+            config.onRenderFailed(BarcodeErrorCodes.VALUE_LENGTH_INVALID)
+        }
+        return
+    }
+
+    if (!canvas) {
+        if (config.onRenderFailed != null) {
+            config.onRenderFailed(BarcodeErrorCodes.CANVAS_UNDEFINED)
+        }
+        return
+    }
 
     const ctx = canvas.getContext("2d");
 
@@ -87,9 +120,11 @@ function renderBarcode128(canvas, value, config) {
 
     } catch (error) {
         console.error(error.message || error);
-
+        if (config.onRenderFailed) {
+            config.onRenderFailed(BarcodeErrorCodes.INTERNAL_ERROR)
+        }
     }
 
 }
 
-export { renderBarcode128 }
+export { renderBarcode128, BarcodeErrorCodes }
