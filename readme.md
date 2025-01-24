@@ -174,8 +174,7 @@ export default {
 
 All kind of contributions are welcome :)
 
-For issues or features requests
-please [create an issue](https://github.com/megaacheyounes/lite-wearable-barcode-generator/issues/new)
+[Create an issue](https://github.com/megaacheyounes/lite-wearable-barcode-generator/issues/new) for bugs or feature requests.
 
 ## License
 
