@@ -1,3 +1,12 @@
+/**
+ * Code 128C Barcode generation library for Huawei LiteWearable watches
+ * {@link https://github.com/megaacheyounes/lite-wearable-barcode-generator Github}
+ *
+ * @param value
+ * @returns
+ */
+
+
 function generateCode128CBarcode(value) {
     // Code 128 number binary map
     const code128C = [
