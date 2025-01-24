@@ -4,7 +4,8 @@ A lightweight JavaScript library for rendering Code 128 barcodes on Canvas compo
  
 ## Installation
 
-Download the JS SDK
+Download the JS SDK:
+ 
 
 ## Usage
 
@@ -167,3 +168,27 @@ export default {
 
 <img src="./.screenshots/example_error.png" alt="Barcode 128 Example" height="300">
 
+## Contribution
+
+All kind of contributions are welcome :)
+
+For issues or features requests
+please [create an issue](https://github.com/megaacheyounes/lite-wearable-barcode-generator/issues/new)
+
+## License
+
+```
+  DO WHAT YOU WANT TO PUBLIC LICENSE
+        Version 2, December 2004
+
+Copyright (C) 2025 Younes Megaache
+
+Everyone is permitted to copy and distribute verbatim or modified
+copies of this license document, and changing it is allowed as long
+as the name is changed.
+
+           DO WHAT YOU WANT TO PUBLIC LICENSE
+  TERMS AND CONDITIONS FOR COPYING, DISTRIBUTION AND MODIFICATION
+
+ 0. You just DO WHAT YOU WANT TO.
+```
