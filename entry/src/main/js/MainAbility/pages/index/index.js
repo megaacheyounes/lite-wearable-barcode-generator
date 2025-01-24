@@ -9,13 +9,6 @@ export default {
     },
     onShow() {
         const canvas = this.$refs.canvasRef;
-        renderBarcode128(canvas, "123456789" , {
-            startingPointX: 10,
-            startingPointY: 5,
-            barHeight: 80,
-            barWidth: 2,
-            barColor: '#111111',
-            bgColor: '#ffffff'
-        })
+        renderBarcode128(canvas, "123456789" )
     }
 }

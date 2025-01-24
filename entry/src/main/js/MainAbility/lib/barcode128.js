@@ -27,6 +27,7 @@ function generateCode128CBarcode(value) {
     let checksum = 105; //code C start with 105
 
     //split the numeric data into pairs
+
     if (value.length % 2 !== 0) {
         value = "0" + value; // start with a leading zero for odd length value
     }
@@ -48,27 +49,36 @@ function generateCode128CBarcode(value) {
     return bars;
 }
 
+const DEFAULT_CONFIG = {
+    startingPointX: 10,
+    startingPointY: 5,
+    barHeight: 80,
+    barWidth: 2,
+    barColor: '#111111',
+    bgColor: '#ffffff'
+}
+
+
 function renderBarcode128(canvas, value, config) {
 
     const ctx = canvas.getContext("2d");
-    console.log(JSON.stringify(config))
-    const barWidth = config.barWidth
-    const barHeight = config.barHeight
-    const barColor = config.barColor
-    const bgColor = config.bgColor
 
-    var startingPointX = config.startingPointX
-    var startingPointY = config.startingPointY
+    config = config || {}
+    const barWidth = config.barWidth !== undefined ? config.barWidth : DEFAULT_CONFIG.barWidth;
+    const barHeight = config.barHeight !== undefined ? config.barHeight : DEFAULT_CONFIG.barHeight;
+    const barColor = config.barColor !== undefined ? config.barColor : DEFAULT_CONFIG.barColor;
+    const bgColor = config.bgColor !== undefined ? config.bgColor : DEFAULT_CONFIG.bgColor;
+
+    var startingPointX = config.startingPointX !== undefined ? config.startingPointX : DEFAULT_CONFIG.startingPointX;
+    var startingPointY = config.startingPointY !== undefined ? config.startingPointY : DEFAULT_CONFIG.startingPointY;
 
     try {
         const patterns = generateCode128CBarcode(value);
         var x = startingPointX
         for (let i = 0; i < patterns.length; i++) {
             const bars = patterns[i]
-            console.log("bar:" + bars)
             for (let j = 0; j < bars.length; j++) {
                 const bit = bars[j]
-                console.log("bit:" + bit)
                 ctx.fillStyle = bit === "1" ? barColor : bgColor;
                 ctx.fillRect(x, startingPointY, barWidth, barHeight);
                 x += barWidth;
