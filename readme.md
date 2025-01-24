@@ -5,7 +5,9 @@ A lightweight JavaScript library for rendering Code 128 barcodes on Canvas compo
 ## Installation
 
 Download the JS SDK:
- 
+
+- [barcode128.js (6kb)](https://github.com/megaacheyounes/lite-wearable-barcode-generator/releases/download/v0.1.0/barcode128.js)
+- [barcode128.min.js (3kb)](https://github.com/megaacheyounes/lite-wearable-barcode-generator/releases/download/v0.1.0/barcode128.min.js)
 
 ## Usage
 
