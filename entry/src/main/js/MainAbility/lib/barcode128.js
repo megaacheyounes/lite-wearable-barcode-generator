@@ -1,4 +1,3 @@
-
 function generateCode128CBarcode(value) {
     // Code 128 number binary map
     const code128C = [
